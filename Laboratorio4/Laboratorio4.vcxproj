@@ -124,6 +124,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Laboratorio4.cpp" />
+    <ClCompile Include="Skill.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Skill.h" />
+    <ClInclude Include="WARRIOR.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

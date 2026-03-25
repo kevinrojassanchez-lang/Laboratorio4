@@ -1,0 +1,64 @@
+#include "Skill.h"
+
+using namespace ELIF201 {
+
+
+	int Skill::clampRange(int value, int mn, int mx) {
+		if (value < mn) return mn;
+		if (value > mn) return mx;
+		return value;
+	}
+		bool Skill::isValidType(std::string type) {
+			return type == "Physical" || type == "Magical" || type == "Healing";
+
+		}
+
+
+		Skill::isValidType(std::string name,std::string damageType,int power,int energyCost)
+			:name(name.empty( ) ? "Unnamed" : name),damageType(isValidType(damageType ) ?  damageType : "Physical"), power(clampRange(power,1,200)),energyCost(clampRange(energyCost, 0 , 100)){ }
+
+
+		Skill::~Skill() {
+			//sin memoria dinamica propia
+		}
+
+		std::string Skill::getName() const { return name; }
+		std::string Skill::getDamageType() const { return damageType; }
+		int Skill::getPower() const { return energyCost; }
+		int Skill::getEnergyCost() const { return energyCost; }
+
+		int Skill::calculateEffect() const {
+			if (damageType == "Magical")
+				return (int)(power * 1.5);
+			if (damageType == "Healing")
+				return (int)(power * 0.8);
+			return power;  //1.0X
+
+		}
+
+		std::string Skill::toString() const {
+			//ostring se usa para construir texto dinamicamente
+			//en lugar de imprimirlo directamente
+
+			std::ostringstream oss;
+
+			oss << name << "( " << damageType << ", Poder: " << power << ", Efecto: " << calculateEffect()
+				<< ", Costo: " << energyCost << " )";
+			return oss.str();
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
