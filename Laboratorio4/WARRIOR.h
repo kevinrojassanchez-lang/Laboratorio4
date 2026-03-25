@@ -2,8 +2,8 @@
 #define WARRIOR_H
 //#include "Skill.h"
 #include <string>
-
-namespace ELIF201 {
+#include "Squad.h"
+using namespace ELIF201 {
 
 	class Warrior {
 
