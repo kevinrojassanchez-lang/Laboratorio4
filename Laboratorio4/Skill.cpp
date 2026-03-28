@@ -1,6 +1,6 @@
 #include "Skill.h"
 
-using namespace ELIF201 {
+using namespace EIF201;
 
 
 	int Skill::clampRange(int value, int mn, int mx) {
@@ -48,17 +48,6 @@ using namespace ELIF201 {
 
 		}
 
-
-
-
-
-
-
-
-
-
-
-}
 
 
 

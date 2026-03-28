@@ -1,9 +1,8 @@
 #ifndef WARRIOR_H
 #define WARRIOR_H
-//#include "Skill.h"
+#include "Skill.h"
 #include <string>
-#include "Squad.h"
-using namespace ELIF201 {
+namespace EIF201 {
 
 	class Warrior {
 
@@ -15,13 +14,13 @@ using namespace ELIF201 {
 		int defense;
 		int health;
 
-		/*Skill** skills;  */  //arreglo dinamico de punteros
+		Skill** skills;   //arreglo dinamico de punteros
 
 		int skillCount;
 		int maxSkills;
 
 		int clampRange(int value, int min, int max);
-			bool isValidClass(std::string cls);
+		bool isValidClass(std::string cls);
 
 	public:
 
@@ -36,20 +35,19 @@ using namespace ELIF201 {
 		int getSkillCount() const;
 
 		bool learnSkill(std::string  name, std::string type, int power, int cost);
-		bool hasSkillCount() const;
+		bool hasSkill(std::string name) const;
 		int totalSkillEffect() const;
 		int calculatePower() const;
+		bool forgetSkill(std::string Skillname); //metodo del reto
+
+
+
 
 		std::string toString() const;
 		void showSkills() const;
 
 
-};
-
-
+	};
 
 }
-
-
-
 #endif
