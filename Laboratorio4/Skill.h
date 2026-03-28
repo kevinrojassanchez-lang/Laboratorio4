@@ -1,5 +1,6 @@
 #pragma once
 
+
 #include <string>
 namespace EIF201 {
 	class Skill
@@ -25,6 +26,31 @@ namespace EIF201 {
 		std::string toString() const;
 	};
 
+}
+
+
+class Skill
+{
+ private:
+	std::string name;
+	std::string damageType;
+	int power;
+	int energyCost;
+
+	int clampRange(int value, int min, int max);
+	bool isValidType(std::string type);
+	
+
+public:
+	Skill(std::string name, std::string damageType, int power, int energyCost);
+	~Skill();
+	std::string getName() const;
+	std::string getDamageType() const;
+	int getPower() const;
+	int getEnergyCost() const;
+	int calculateEffect() const;
+	std::string toString() const;
+};
 }
 
 
