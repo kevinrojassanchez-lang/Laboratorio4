@@ -51,6 +51,8 @@ Warrior::~Warrior() {
 
 
 
+
+
 }
 bool Warrior::learnSkill(std::string name, std::string type,
 	int power, int cost) {
@@ -108,6 +110,32 @@ int Warrior::getHealth() const {
 int Warrior::getSkillCount() const {
 	return skillCount;
 }
+
+
+bool Warrior::forgetSkill(std::string Skillname) {  //metodo del reto
+
+	for (int i = 0; i < skillCount; i++) {
+
+		if (skills[i] != nullptr && skills[i]->getName() == Skillname) {
+
+			delete skills[i];
+
+			for (int j = i; j < skillCount; j++) {
+
+				skills[j] = skills[j + 1];
+			}
+			skills[skillCount - 1] = nullptr;
+			skillCount--; 
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+
+
 
 std::string Warrior::toString() const {
 	std::ostringstream oss;
