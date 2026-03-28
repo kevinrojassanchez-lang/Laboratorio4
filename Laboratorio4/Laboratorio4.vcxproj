@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="Laboratorio4.cpp" />
     <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="Squad.cpp" />
     <ClCompile Include="WARRIOR.cpp" />
   </ItemGroup>
   <ItemGroup>
